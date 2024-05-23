@@ -1,0 +1,124 @@
+/* reset */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: Poppins-Bold;
+  src: url(/assets/fonts/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: Poppins-extrabold;
+  src: url(/assets/fonts/Poppins-ExtraBold.ttf);
+}
+@font-face {
+  font-family: Poppins-BoldItalic;
+  src: url(/assets/fonts/Poppins-BoldItalic.ttf);
+}
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+}
+
+body {
+  background-color: var(--Light-grey);
+  height: 100vh;
+  border: 1px solid red;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  height: 90vh;
+  justify-content: center;
+}
+.calculator {
+  background-color: var(--White);
+  height: 450px;
+  width: 700px;
+  border: 1px solid var(--White);
+  border-radius: 20px;
+  border-bottom-right-radius: 100px;
+}
+
+/* form */
+.formError {
+  font-size: 12px;
+  color: var(--Light-red);
+}
+.formErrorDay,
+.formErrorMonth,
+.formErrorYear {
+  display: none;
+}
+.ageform {
+  display: flex;
+  gap: 20px;
+  padding: 30px 15px 30px 15px;
+  margin-left: 30px;
+}
+.ageform > div > label {
+  display: inline-block;
+  font-size: 12px;
+  margin-bottom: 5px;
+  letter-spacing: 4px;
+  font-family: Poppins-Bold;
+}
+.ageform > div > input {
+  width: 100px;
+  height: 40px;
+  font-size: 32px;
+
+  font-family: Poppins-Bold;
+}
+.divider {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  width: 80%;
+}
+.hrdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-button {
+  background-color: var(--Off-black);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+.search-button:hover {
+  background-color: var(--Purple);
+}
+.search-icon {
+  width: 100%;
+  height: 50px;
+}
+
+/* Results */
+.results {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+}
+.results > div > span {
+  font-size: 80px;
+  color: var(--Purple);
+}
+.results > * {
+  font-family: Poppins-BoldItalic;
+  font-size: 70px;
+  line-height: 70px;
+  font-weight: 900;
+}

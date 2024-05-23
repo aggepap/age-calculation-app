@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Frontend Mentor | Age calculator app</title>
+    <section class="main">
+      <div class="calculator">
+        <div class="formdiv">
+          <form class="ageform" id="ageform">
+            <div class="dayform">
+              <label class="daylabel" for="Day">DAY</label><br />
+              <input
+                required
+                type="number"
+                id="Day"
+                name="Day"
+                maxlength="2"
+                min="1"
+                max="31"
+                placeholder="25"
+              /><br />
+              <span class="formError formErrorDay">must be a valid day</span>
+            </div>
+            <div class="monthform">
+              <label for="month">MONTH</label><br />
+              <input
+                required
+                type="number"
+                id="month"
+                name="month"
+                maxlength="2"
+                min="1"
+                max="12"
+                placeholder="09"
+              />
+              <br />
+              <span class="formError formErrorMonth"
+                >must be a valid month</span
+              >
+            </div>
+            <div class="yearform">
+              <label for="year">YEAR</label><br />
+              <input
+                required
+                type="number"
+                id="year"
+                name="year"
+                maxlength="4"
+                min="1900"
+                max="2024"
+                placeholder="1986"
+              />
+              <br />
+              <span class="formError formErrorYear">must be a valid Year</span>
+            </div>
+          </form>
+        </div>
+        <div class="hrdiv">
+          <hr class="divider" />
+          <button
+            class="search-button"
+            type="submit"
+            form="ageform"
+            value="submit"
+          >
+            <img
+              class="search-icon"
+              src="./assets/images/icon-arrow.svg"
+              alt=""
+            />
+          </button>
+        </div>
+        <div class="results">
+          <div class="years"><span class="yearview">--</span> Years</div>
+          <div class="months"><span class="monthsview">--</span> months</div>
+          <div class="days"><span class="daysview">--</span> days</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/aggepap">Aggelos Papanagiotou</a>.
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
